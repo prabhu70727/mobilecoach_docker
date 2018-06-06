@@ -1,0 +1,5 @@
+ docker run --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME:mc -e MONGO_INITDB_ROOT_PASSWORD:mc -e MONGO_INITDB_DATABASE:mc -d mongo:latest
+ 
+ export JAVA_OPTS='-Dmc.configuration="/Users/prabhu/mobilecoach-dev-core/configuration.properties" -server -Dfile.encoding=UTF8 -Djava.awt.headless=true -Xms2g -Xmx2g -Dmc_logging_folder=/tmp -Dmc_logging_console_level=INFO -Dmc_logging_rolling_file_level=INFO'
+
+ export JAVA_OPTS="-server -Dfile.encoding=UTF8 -Djava.awt.headless=true -Xms1g -Xmx1g -Dmc_logging_folder=/tmp -Dmc_logging_console_level=INFO -Dmc_logging_rolling_file_level=INFO -XX:+UseConcMarkSweepGC -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses=true -Dmc.configuration=/Users/prabhu/mobilecoach-dev-core/configuration.properties -Dmc_website.configuration=/mc_data/mc_config/web_configuration.properties"
